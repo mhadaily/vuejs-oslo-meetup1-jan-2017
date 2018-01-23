@@ -1,0 +1,25 @@
+{
+  "name": "vueupandrunning",
+  "version": "1.0.0",
+  "description": "Vue.js Oslo Meetup",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "url": "git@github.com:mhadaily/vuejs-oslo-meetup1-jan-2017.git"
+  },
+  "keywords": [
+    "VUE",
+    "VUE.JS"
+  ],
+  "author": "Majid Hajian",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.13"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}

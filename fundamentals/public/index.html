@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Up and Runing - Vue2.5</title>
+  <script src="/vue.js"></script>
+</head>
+
+<body>
+
+  <!-- Dynamically bind one or more attributes, or a component prop to an expression. -->
+  <h1 id="h1" v-bind:title="tooltip">
+    <!-- <h1 id="h1" :title="tooltip"> -->
+    <span v-text="subject"></span>
+    <!-- same as -->
+    <span>{{ subject }}</span>
+  </h1>
+
+  <ul id="speakers">
+    <li v-for="(speaker,index) in speakers" :key="index">
+      <span v-if="speaker.isAwesome">❤</span> {{ speaker.name | reverse }}
+      <span v-html="speaker.desc" @click="alert(speaker.name)"></span>
+      <!-- v-on -> @ -->
+    </li>
+  </ul>
+
+  <h3 id="computed"> {{ fullName }}</h3>
+
+  <h3 id="methods">
+    <span v-bind:style="isStyleChanged ? textStyle : ''">{{ firstName | Upper}}</span>
+    <button v-on:click="toggleStyle">toggleStyle</button>
+  </h3>
+
+  <div id="gcomponent">
+    <meetup-component :message="message"></meetup-component>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+
+</html>
