@@ -25,6 +25,11 @@ var app2 = new Vue({
       }
     ]
   },
+  methods: {
+    alert: function (param) {
+      alert(param);
+    }
+  }
 });
 
 var app3 = new Vue({
